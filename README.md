@@ -1,22 +1,31 @@
-# Rain Game
+# Rainy Day Game
 
-This is a simple game written in Rust using the ncurses library. In this game, you control a user character at the bottom of the screen and try to avoid raindrops that fall from the top of the screen. You get one point for each raindrop you avoid and lose one point for each raindrop that hits you. The game ends when your score reaches -10.
+Rainy Day Game은 ncurses와 Rust 언어를 이용하여 개발한 터미널 게임입니다. 
 
-## Prerequisites
+## 게임 방법
 
-- Rust
-- ncurses library
+화면 하단에서 사용자가 움직이는 'U' 문자와 화면 상단에서 떨어지는 'R' 문자(비)가 존재합니다. 사용자는 좌우 화살표 키를 이용하여 'U' 문자를 좌우로 이동시킬 수 있습니다. 'R' 문자는 화면 상단에서부터 떨어지며, 사용자가 이를 받치면 점수를 얻습니다. 하지만, 사용자가 'R' 문자를 받치지 못하고 바닥으로 떨어뜨린 경우 점수가 감소하게 됩니다. 게임 종료 시점은 점수가 -10점 이하인 경우입니다.
 
-## Installation
+## 개선할 점
 
-1. Clone the repository
-2. Run `cargo run`
+1. 사용자가 비에 맞으면 게임이 종료되는 기능 추가 필요.
+2. 사용자의 입력이 없어도 비가 동적으로 떨어지는 기능 추가 필요.
+3. 점수 반영 기준 강화.
+4. 사용자의 예기치 않은 입력에 따른 에러 처리 필요.
 
-## Controls
+## 빌드 및 실행 방법
 
-- Left arrow: Move the user character to the left
-- Right arrow: Move the user character to the right
+먼저, Rust 언어를 설치해야 합니다. Rust 공식 홈페이지(https://www.rust-lang.org/tools/install)를 참고하여 설치하시기 바랍니다.
 
-## License
+```sh
+# 레포지토리를 로컬에 클론합니다.
+git clone https://github.com/<username>/rainy-day-game.git
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+# 클론한 디렉토리로 이동합니다.
+cd rainy-day-game
+
+# 게임을 빌드합니다.
+cargo build
+
+# 게임을 실행합니다.
+cargo run
